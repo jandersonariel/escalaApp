@@ -1,11 +1,12 @@
 import React from 'react';
+import { Text } from 'react-native';
 
 const Home = () => {
   return (
-    <div>
-
-    </div>
-  )
+    <>
+      <Text>aqui o calendario completo</Text>
+    </>
+  );
 };
 
 export default Home;

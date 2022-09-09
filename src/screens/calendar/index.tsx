@@ -1,11 +1,7 @@
 import React from 'react';
 
 const Calendar = () => {
-  return (
-    <div>
-
-    </div>
-  )
-}
+  return <div>aqui o calendario da semana</div>;
+};
 
 export default Calendar;
