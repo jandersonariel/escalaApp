@@ -1,11 +1,13 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { Container } from './styles';
 
 
 const Day = () => {
   return (
     <>
-      <Text>sdasds</Text>
+      <Container>
+
+      </Container>
     </>
   )
 };

@@ -1,13 +1,13 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { Container, Text } from './styles';
 import Day from '../../components/Day';
 
 const Home = () => {
   return (
-    <>
-      <Text>aqui o calendario completo</Text>
+    <Container>
+
       <Day />
-    </>
+    </Container>
   );
 };
 
