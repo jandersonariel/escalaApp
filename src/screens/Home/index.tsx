@@ -5,7 +5,10 @@ import Day from '../../components/Day';
 const Home = () => {
   return (
     <Container>
-
+      <Day />
+      <Day />
+      <Day />
+      <Day />
       <Day />
     </Container>
   );

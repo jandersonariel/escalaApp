@@ -1,12 +1,12 @@
 import React from 'react';
-import { Container } from './styles';
+import { Container, Text } from './styles';
 
 
 const Day = () => {
   return (
     <>
       <Container>
-
+        <Text>fgdsfd</Text>
       </Container>
     </>
   )
