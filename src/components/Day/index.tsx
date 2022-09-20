@@ -1,13 +1,13 @@
 import React from 'react';
-import { Container, Text } from './styles';
+import { DayCalendar, DayText } from './styles';
 
 
 const Day = () => {
   return (
     <>
-      <Container>
-        <Text>fgdsfd</Text>
-      </Container>
+      <DayCalendar>
+        <DayText>2</DayText>
+      </DayCalendar>
     </>
   )
 };

@@ -1,15 +1,11 @@
 import React from 'react';
 import { Container, Text } from './styles';
-import Day from '../../components/Day';
+import Calendar from '../../components/calendar';
 
 const Home = () => {
   return (
     <Container>
-      <Day />
-      <Day />
-      <Day />
-      <Day />
-      <Day />
+      <Calendar />
     </Container>
   );
 };
