@@ -1,10 +1,11 @@
 import styled from 'styled-components/native'
 
 export const CompletCalendar = styled.View`
-  display: flex;
-  width: 80%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
   height: 50%;
   background: white;
+  align-content: space-between;
 `;
-
-

@@ -5,8 +5,8 @@ export const DayCalendar = styled.View`
   align-items: center;
   justify-content: center;
   border: 1px;
-  width: 15%;
-  height: 15%;
+  width: 13%;
+  height: 13%;
 `;
 export const DayText = styled.Text`
   
