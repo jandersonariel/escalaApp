@@ -7,7 +7,7 @@ const Calendarlibb = () => {
   return (
     <>
       <Calendar
-        style={{ height: "80%", width: "90%" }}
+        style={{ height: "80%", width: "100%" }}
       />
 
 
