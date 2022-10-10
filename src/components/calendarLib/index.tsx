@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Text } from 'react-native';
 import { Calendar, CalendarList, Agenda, LocaleConfig } from 'react-native-calendars';
 
@@ -11,6 +11,11 @@ LocaleConfig.locales['pt'] = {
 }
 LocaleConfig.defaultLocale = "pt"
 
+const [ChangeDate, setChangeDate] = useState()
+
+useEffect(() => {
+
+}, [])
 
 const Calendarlibb = () => {
   return (
@@ -19,6 +24,31 @@ const Calendarlibb = () => {
         style={{ height: "80%" }}
         onDayLongPress={(e) => {
           console.log(e)
+        }}
+        markingType={'custom'}
+        markedDates={{
+          'ChangeDate': {
+            customStyles: {
+              container: {
+                backgroundColor: 'green'
+              },
+              text: {
+                color: 'black',
+                fontWeight: 'bold'
+              }
+            }
+          },
+          '2022-10-29': {
+            customStyles: {
+              container: {
+                backgroundColor: 'white',
+                elevation: 2
+              },
+              text: {
+                color: 'blue'
+              }
+            }
+          }
         }}
       //dayComponent={(e) => {
       //console.log(e)
