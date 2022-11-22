@@ -11,11 +11,35 @@ LocaleConfig.locales['pt'] = {
 }
 LocaleConfig.defaultLocale = "pt"
 
-const [ChangeDate, setChangeDate] = useState()
+const [changeDate, setChangeDate] = useState({})
 
-useEffect(() => {
+const changeObject = (day) => {
+  {
+    '2022-10-30': {
+      customStyles: {
+        container: {
+          backgroundColor: 'green'
+        },
+        text: {
+          color: 'black',
+          fontWeight: 'bold'
 
-}, [])
+        }
+      }
+    },
+    '2022-10-29': {
+      customStyles: {
+        container: {
+          backgroundColor: 'white',
+          elevation: 2
+        },
+        text: {
+          color: 'blue'
+        }
+      }
+    }
+  }
+}
 
 const Calendarlibb = () => {
   return (
@@ -25,31 +49,12 @@ const Calendarlibb = () => {
         onDayLongPress={(e) => {
           console.log(e)
         }}
-        markingType={'custom'}
-        markedDates={{
-          'ChangeDate': {
-            customStyles: {
-              container: {
-                backgroundColor: 'green'
-              },
-              text: {
-                color: 'black',
-                fontWeight: 'bold'
-              }
-            }
-          },
-          '2022-10-29': {
-            customStyles: {
-              container: {
-                backgroundColor: 'white',
-                elevation: 2
-              },
-              text: {
-                color: 'blue'
-              }
-            }
-          }
+        onDayPress={day => {
+          console.log('selected day', day);
         }}
+        markingType={'custom'}
+        markedDates={changeDate}
+        
       //dayComponent={(e) => {
       //console.log(e)
       //return (
