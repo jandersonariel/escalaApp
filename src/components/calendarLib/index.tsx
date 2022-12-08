@@ -19,20 +19,20 @@ const changeObject = (day) => {
       customStyles: {
         container: {
           backgroundColor: 'green'
-        },
+        }
         text: {
-          color: 'black',
+          color: 'black'
           fontWeight: 'bold'
 
         }
       }
-    },
+    }
     '2022-10-29': {
       customStyles: {
         container: {
-          backgroundColor: 'white',
+          backgroundColor: 'white'
           elevation: 2
-        },
+        }
         text: {
           color: 'blue'
         }
