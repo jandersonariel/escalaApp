@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text } from 'react-native';
-import { Calendar, CalendarList, Agenda, LocaleConfig } from 'react-native-calendars';
+import { Calendar, CalendarList, Agenda, LocaleConfig, DateData } from 'react-native-calendars';
 
 LocaleConfig.locales['pt'] = {
   monthNames: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"],
@@ -11,37 +10,35 @@ LocaleConfig.locales['pt'] = {
 }
 LocaleConfig.defaultLocale = "pt"
 
-const [changeDate, setChangeDate] = useState({})
+const Calendarlibb = () => {
+  const [changeDate, setChangeDate] = useState({})
 
-const changeObject = (day) => {
-  {
-    '2022-10-30': {
+const changeObject = (day: any) => {
+  setChangeDate ( {
+    [day.dateString]: {
       customStyles: {
         container: {
           backgroundColor: 'green'
-        }
+        },
         text: {
-          color: 'black'
+          color: 'black',
           fontWeight: 'bold'
-
         }
       }
-    }
-    '2022-10-29': {
+    },
+    [day.dateString]: {
       customStyles: {
         container: {
-          backgroundColor: 'white'
+          backgroundColor: 'white',
           elevation: 2
-        }
+        },
         text: {
-          color: 'blue'
+          color: 'aqua'
         }
       }
     }
-  }
+  })
 }
-
-const Calendarlibb = () => {
   return (
     <>
       <Calendar
@@ -50,6 +47,8 @@ const Calendarlibb = () => {
           console.log(e)
         }}
         onDayPress={day => {
+          changeObject(day)
+
           console.log('selected day', day);
         }}
         markingType={'custom'}
@@ -64,14 +63,8 @@ const Calendarlibb = () => {
       // )
       // }}
       />
-
-
     </>
-
   )
 };
 
 export default Calendarlibb;
-
-
-
